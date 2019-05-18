@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
     var request = require('request');
     var url = constants.restApiUrl+constants.restApiGetPhrase;
 
-    var propertiesObject = { phraseType:'noun' };
+    var propertiesObject = { phraseType: req.query.phraseType };
 
     request({url:url, qs:propertiesObject}, function(err, response, body) {
 
