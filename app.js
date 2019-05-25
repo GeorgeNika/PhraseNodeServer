@@ -7,6 +7,7 @@ var logger = require('morgan');
 var constants = require('./constants');
 var indexRouter = require('./routes/index');
 var phraseRouter = require('./routes/phrase');
+var wordInformationRouter = require('./routes/wordInformation');
 
 var app = express();
 
@@ -23,7 +24,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use('/', indexRouter);
-app.use(constants.apiVesion1+constants.apiGetPhrase, phraseRouter);
+app.use(constants.apiV_1GetPhrase, phraseRouter);
+app.use(constants.apiV_1GetWordInformation, wordInformationRouter);
 
 
 

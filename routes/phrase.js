@@ -2,7 +2,6 @@ var express = require('express');
 var router = express.Router();
 var constants = require('../constants');
 
-/* GET phrase. */
 router.get('/', function(req, res, next) {
 
     var request = require('request');
